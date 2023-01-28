@@ -105,7 +105,8 @@ sealed class UiAction {
 
 data class UiState(
     val query: String,
-    val searchResult: RepoSearchResult
+    val lastQueryScrolled: String = DEFAULT_QUERY,
+    val hasNotScrolledForCurrentSearch: Boolean = false
 )
 
 private const val VISIBLE_THRESHOLD = 5
