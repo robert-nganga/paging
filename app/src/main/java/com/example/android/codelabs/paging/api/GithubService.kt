@@ -20,9 +20,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface GithubService {
-    /**
-     * Get repos ordered by stars.
-     */
+
     @GET("search/repositories?sort=stars")
     suspend fun searchRepos(
         @Query("q") query: String,
