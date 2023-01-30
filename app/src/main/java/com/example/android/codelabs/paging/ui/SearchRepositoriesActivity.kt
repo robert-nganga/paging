@@ -3,6 +3,7 @@ package com.example.android.codelabs.paging.ui
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.android.codelabs.paging.databinding.ActivitySearchRepositoriesBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -17,4 +18,5 @@ class SearchRepositoriesActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
     }
+
 }
