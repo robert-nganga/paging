@@ -4,12 +4,12 @@ import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.example.android.codelabs.paging.api.GithubService
 import com.example.android.codelabs.paging.model.Repo
+import com.example.android.codelabs.paging.util.Constants.NETWORK_PAGE_SIZE
 import okio.IOException
 import retrofit2.HttpException
 
 
 private const val GITHUB_STARTING_PAGE_INDEX = 1
-private const val NETWORK_PAGE_SIZE = 20
 class RepoPagingSource(private val api: GithubService, private val query: String): PagingSource<Int, Repo>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Repo> {
