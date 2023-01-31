@@ -7,10 +7,10 @@ import com.example.android.codelabs.paging.api.GithubService
 import com.example.android.codelabs.paging.model.Repo
 import com.example.android.codelabs.paging.util.Constants.NETWORK_PAGE_SIZE
 import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
 
 
-
-class RepoRepository(private val api: GithubService) {
+class RepoRepository@Inject constructor(private val api: GithubService) {
 
     fun getSearchResultsStream(query: String): Flow<PagingData<Repo>> {
         return Pager(
